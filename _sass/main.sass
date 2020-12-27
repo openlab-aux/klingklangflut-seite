@@ -1,5 +1,7 @@
 @import definitions
 @import logo
+@import footer_links
+@import divider
 
 body
   background: $background-color
@@ -7,6 +9,11 @@ body
   font-family: $body-font
   font-size: $font-size-base
 
+
+a
+  color: $color-1
+  &:hover, &:active
+    color: $color-4
 
 .color-1
   background: $color-1
