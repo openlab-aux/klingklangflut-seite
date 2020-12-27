@@ -3,12 +3,9 @@ layout: default
 title: Main
 ---
 
-
 ## You're ready to go!
 
 Start developing your Jekyll website.
-
-<div class='gradient-test'></div>
 
 <div class='color-1'>FARBE 1</div>
 <div class='color-2'>FARBE 2</div>

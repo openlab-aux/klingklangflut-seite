@@ -32,3 +32,8 @@ $breakpoint-xxl: 1400px
 =breakpoint-down($breakpoint)
   @media (max-width: $breakpoint)
     @content
+
+=rainbow
+  background: $gradient
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
