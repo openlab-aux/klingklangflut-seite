@@ -5,13 +5,13 @@ permalink: /testtest/
 layout: default
 ---
 
-## HTML Elements:
+## HTML Elements
 
 `<div class='divider'></div>`:
 
 <div class='divider'></div>
 
-## Colors (available as sass variables):
+## Colors (available as sass variables)
 
 <div class='color-1'>$color-1</div>
 <div class='color-2'>$color-2</div>
