@@ -5,8 +5,8 @@
 1. Ruby installieren (aufgesetzt wurde es mit Ruby 2.6.6. Ich empfehle rbenv oder RVM zum managen der Ruby-Version.)
 2. Bundler installieren: `gem install bundler`
 3. Bundeln: `bundle install`
-4.a Lokalen development server starten mit `bundle exec jekyll serve`
-4.b Falls Änderungen am Javascript nötig sind, siehe Abschnitt "Javascript"
+4. Javascript aufsetzen (siehe Abschnitt Javascript)
+5. `yarn run develop` in der konsole starten
 5. <http://localhost:4000/> aufrufen
 
 
@@ -29,4 +29,4 @@ Im `_site` Ordner sind HTML und CSS die auf jedem Webspace laufen sollten.
 Ich verwende `nvm`. `nvm use` verwendet die node-version aus .nvmrc, also aktuell v12.
 Dann wird noch yarn gebraucht. [Install-Anleitung hier](https://yarnpkg.com/getting-started/install).
 
-Javascript ist gemanaged mit webpack und yarn. Schreibe js im `_webpack` Ordner. Inhalt in `assets` und `_site/assets` wird überschrieben. Zum Bauen des js kann in der console der Befehl `yarn run webpack` verwendet werden.
+Javascript ist gemanaged mit webpack und yarn. Schreibe js im `_webpack` Ordner. Inhalt in `assets` und `_site/assets` wird überschrieben. Mit `yarn run develop` werden javascript assets automatisch neu kompiliert bei Änderungen.

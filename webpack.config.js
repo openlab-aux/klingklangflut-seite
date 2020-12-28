@@ -26,6 +26,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        // the order of `use` is important!
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      },
       { 
         test: /\.js$/, 
         exclude: /node_modules/, 
