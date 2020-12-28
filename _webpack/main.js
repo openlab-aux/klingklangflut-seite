@@ -1,3 +1,5 @@
+import fontawesomeBrands from '@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2'
+
 import 'unpoly'
 import CodeMirror from 'codemirror'
 import 'codemirror/mode/ruby/ruby'

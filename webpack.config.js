@@ -3,6 +3,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 // https://webpack.js.org/configuration/
 module.exports = {
+  mode: 'production',
   entry: {
     main: path.join(__dirname, '_webpack', 'main'),
   },
@@ -25,7 +26,19 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { 
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        loader: 'babel-loader' 
+      },
+      { 
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader',
+        options: {
+          outputPath: path.join('..', 'fonts'),
+          name: '[name].[ext]',
+        }
+      }
     ],
   },
 };
