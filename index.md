@@ -5,4 +5,6 @@ title: Main
 
 ## You're ready to go!
 
-Start developing your Jekyll website.
+Write your SonicPi commands here:
+
+<textarea id="code-editor" code-editor>
