@@ -9,8 +9,7 @@ This is a project for remote online jamming via live coding.
 The system uses a SonicPi server as sound engine which you can send commands / music generating code to via this webpage. The music from all users gets mixed down and streamed to this website via a standard HTTP audio stream:
 
  <audio controls>
-  <source src="http://christmas-aacp.rautemusik.fm/listen.pls" type="audio/accp">
-  <source src="http://christmas-high.rautemusik.fm/listen.pls" type="audio/mpeg">
+  <source src="http://klingklangflut.de:8042/klingklang.ogg" type="audio/ogg">
   Your browser does not support the audio tag.
 </audio> 
 
