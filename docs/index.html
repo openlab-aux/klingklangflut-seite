@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class='header'>
-      <div class='logo' aria-label='klingklangflut logo'>
+      <div class='logo' aria-label='kling klang flut'>
   <div class='logo--kling' aria-hidden="true">
   ,dPYb,     ,dPYb,
   IP'`Yb     IP'`Yb
@@ -107,22 +107,20 @@ The system uses a SonicPi server as sound engine which you can send commands / m
 
 <p>Use a live loop to loop your code and sync up with others</p>
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">live_loop</span> <span class="ss">:loopname</span>
-	<span class="n">sync</span> <span class="ss">:metro</span>
+  <span class="n">sync</span> <span class="ss">:metro</span>
 
-	<span class="n">play</span> <span class="p">(</span><span class="n">chord</span> <span class="ss">:c4</span><span class="p">,</span> <span class="ss">:major</span><span class="p">)</span>
-	<span class="nb">sleep</span> <span class="mi">1</span>
-
+  <span class="n">play</span> <span class="p">(</span><span class="n">chord</span> <span class="ss">:c4</span><span class="p">,</span> <span class="ss">:major</span><span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
 <span class="k">end</span>
 </code></pre></div></div>
 <p><code class="language-plaintext highlighter-rouge">:loopname</code> can be an arbitrary name that identifies the loop. Please note that your loop keeps existing and playing even if you close this webpage. So please consider stopping your loop when you leave by overwriting your loop with an emtpy one, or simply by writing <code class="language-plaintext highlighter-rouge">stop</code> as first command within your loop:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">live_loop</span> <span class="ss">:loopname</span>
-	<span class="n">sync</span> <span class="ss">:metro</span>
+  <span class="n">sync</span> <span class="ss">:metro</span>
 
-	<span class="n">stop</span>
-	<span class="n">play</span> <span class="p">(</span><span class="n">chord</span> <span class="ss">:c4</span><span class="p">,</span> <span class="ss">:major</span><span class="p">)</span>
-	<span class="nb">sleep</span> <span class="mi">1</span>
-
+  <span class="n">stop</span>
+  <span class="n">play</span> <span class="p">(</span><span class="n">chord</span> <span class="ss">:c4</span><span class="p">,</span> <span class="ss">:major</span><span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
 <span class="k">end</span>
 </code></pre></div></div>
 
@@ -154,19 +152,19 @@ The system uses a SonicPi server as sound engine which you can send commands / m
 <p>You can embed your code in fx blocks:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">live_loop</span> <span class="ss">:loopname</span> <span class="k">do</span>
-	<span class="n">sync</span> <span class="ss">:metro</span>
+  <span class="n">sync</span> <span class="ss">:metro</span>
 	
-	<span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">room: </span><span class="mi">2</span><span class="p">,</span> <span class="k">do</span>
-		<span class="n">play</span> <span class="ss">:c4</span>
-		<span class="nb">sleep</span> <span class="mi">1</span>
-	<span class="k">end</span>
+  <span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">room: </span><span class="mi">2</span><span class="p">,</span> <span class="k">do</span>
+    <span class="n">play</span> <span class="ss">:c4</span>
+    <span class="nb">sleep</span> <span class="mi">1</span>
+  <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div></div>
 <p>A full list of all effects and there parameters can be found here: <a href="">https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/fx.md</a></p>
 
 <h1 id="more-advanced-snippets">More advanced snippets</h1>
 
-<p>Many examples can be found on github: <a href="">https://github.com/sonic-pi-net/sonic-pi/tree/main/etc/examples</a> and <a href="">https://gist.github.com/darinwilson/137764d4b06072de626c</a>, <a href="">https://github.com/hopbit/sonic-pi-snippets</a></p>
+<p>Many examples can be found on github: <a href="https://github.com/sonic-pi-net/sonic-pi/tree/main/etc/examples">https://github.com/sonic-pi-net/sonic-pi/tree/main/etc/examples</a>, <a href="https://gist.github.com/darinwilson/137764d4b06072de626c">https://gist.github.com/darinwilson/137764d4b06072de626c</a>, and <a href="https://github.com/hopbit/sonic-pi-snippets">https://github.com/hopbit/sonic-pi-snippets</a></p>
 
     </div>
     <div class='footer'>
