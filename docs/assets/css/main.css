@@ -22,7 +22,7 @@
 
 .colors--color-7 { background: #c85e7c; }
 
-.content { margin: 0 auto; padding: 0 20px; max-width: 1200px; }
+.content { margin: 0 auto 40px; padding: 0 20px; max-width: 1200px; }
 
 @media (max-width: 1200px) { .content { max-width: 992px; } }
 
