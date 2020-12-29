@@ -66,4 +66,6 @@ a:hover, a:active { color: #fd8b19; }
 
 code { color: #fdcc59; }
 
+button { display: inline-block; position: relative; cursor: pointer; background-color: #8fc13e; border: 1px solid #8fc13e; border-radius: 25px; padding: 10px 50px; color: black; font-weight: bold; font: inherit; }
+
 /*# sourceMappingURL=main.css.map */

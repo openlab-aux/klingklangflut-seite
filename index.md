@@ -23,6 +23,7 @@ In general, don't be afraid, just play around and have fun. It's just sounds :)
 
 <textarea id="code-editor" aria-label='Editor for sonic pi commands' code-editor></textarea>
 
+<button type="button" submit-code>Send</button> 
 
 # Basic commands
 
