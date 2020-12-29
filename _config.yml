@@ -19,5 +19,5 @@ exclude:
 # the following settings are overwritten when starting the development server with 
 # `yarn run develop` and are only used for the build (for Github pages)
 url: '' # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: '/klingklangflut-seite/docs' # the subpath of your site, e.g. /blog
+baseurl: '/klingklangflut-seite' # the subpath of your site, e.g. /blog
 destination: 'docs'
