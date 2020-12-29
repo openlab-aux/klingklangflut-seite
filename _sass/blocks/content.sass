@@ -1,0 +1,13 @@
+@import definitions
+
+.content
+  margin: 0 auto
+  padding: 0 20px
+  max-width: $breakpoint-xl
+  +breakpoint-down($breakpoint-xl)
+    max-width: $breakpoint-lg
+  +breakpoint-down($breakpoint-lg)
+    max-width: $breakpoint-md
+  +breakpoint-down($breakpoint-xs)
+    padding: 0 10px
+    
