@@ -7,11 +7,15 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-# gem "jekyll", "~> 4.1.1"
+gem "jekyll", "~> 4.1.1"
+
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem 'github-pages'
-end
+# => This site is built for github pages without the github pages gem and
+# instead building to contents to a folder, which is used by Github to 
+# serve the page.
+
+#group :jekyll_plugins do
+#end

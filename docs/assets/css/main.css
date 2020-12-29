@@ -1,0 +1,61 @@
+@font-face { font-family: 'Font Awesome 5 Brands'; src: url(../fonts/fa-brands-400.woff2); }
+
+.fa { font-family: 'Font Awesome 5 Brands'; font-weight: 400; font-style: normal; }
+
+.fa-github:before { content: '\f09b'; }
+
+.fa-twitter:before { content: '\f099'; }
+
+.fa-wordpress:before { content: '\f19a'; }
+
+.logo { white-space: pre; background: linear-gradient(135deg, #1290bf, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: flex; justify-content: center; font-size: 16px; height: 336px; }
+
+@media (max-width: 1200px) { .logo { font-size: 12px; height: 247px; } }
+
+@media (max-width: 992px) { .logo { font-size: 10px; height: 208px; } }
+
+@media (max-width: 768px) { .logo { font-size: 8px; height: 167px; } }
+
+@media (max-width: 576px) { .logo { font-size: 6px; height: 125px; } }
+
+@media (max-width: 480px) { .logo { font-size: 5px; height: 104px; } }
+
+.logo--kling { align-self: center; }
+
+.logo--klang { align-self: flex-end; }
+
+.logo--flut { align-self: flex-start; }
+
+.footer-links { font-size: 16px; }
+
+.footer-links ul { list-style-type: none; padding: 0; display: flex; justify-content: space-evenly; flex-wrap: wrap; }
+
+.footer-links a { color: #DDDDDD; text-decoration: none; vertical-align: top; }
+
+.footer-links--item { margin: 10px; }
+
+.divider { width: 100%; height: 2px; margin: 20px 0; background-image: linear-gradient(135deg, #1290bf, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); }
+
+.colors--color-1 { background: #1290bf; }
+
+.colors--color-2 { background: #8fc13e; }
+
+.colors--color-3 { background: #fdcc59; }
+
+.colors--color-4 { background: #fd8b19; }
+
+.colors--color-5 { background: #b33508; }
+
+.colors--color-6 { background: #dd464c; }
+
+.colors--color-7 { background: #c85e7c; }
+
+body { background: #111111; color: #DDDDDD; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; }
+
+a { color: #1290bf; }
+
+a:hover, a:active { color: #fd8b19; }
+
+code { color: #fdcc59; }
+
+/*# sourceMappingURL=main.css.map */

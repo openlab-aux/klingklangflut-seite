@@ -6,8 +6,8 @@
 2. Bundler installieren: `gem install bundler`
 3. Bundeln: `bundle install`
 4. Javascript aufsetzen (siehe Abschnitt Javascript)
-5. `yarn run develop` in der konsole starten
-5. <http://localhost:4000/> aufrufen
+5. `yarn run develop` in der konsole starten (startet jekyll und die js build pipeline)
+6. <http://localhost:4000/> aufrufen
 
 
 ## Weiterentwicklung
