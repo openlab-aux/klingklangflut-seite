@@ -21,7 +21,7 @@ Unter <http://localhost:4000/testtest/> kann man das Farbschema und andere Style
 
 ## Deploy
 
-Im `_site` Ordner sind HTML und CSS die auf jedem Webspace laufen sollten.
+In der Konsole `yarn run build` aufrufen. Dann alles einchecken und ins Git Repo pushen. Auf der Github Page werden die Inhalte des Folders `docs` im Branch `main` angezeigt.
 
 
 ## Javascript
