@@ -67,12 +67,105 @@
 
     </div>
     <div class='content'>
-      <h2 id="youre-ready-to-go">You’re ready to go!</h2>
+      <h1 id="hey-welcome">Hey, welcome!</h1>
 
-<p>Write your SonicPi commands here:</p>
+<p>This is a project for remote online jamming via live coding.
+The system uses a SonicPi server as sound engine which you can send commands / music generating code to via this webpage. The music from all users gets mixed down and streamed to this website via a standard HTTP audio stream.</p>
 
-<textarea id="code-editor" code-editor="">
-</textarea>
+<p>You can use all commands and syntax that are supported by SonicPi. Below, we provided a few simple code snippets and examples to get you started. But there is also a great tutorial about the SonicPi language and lots of code snippets from others on the internet.</p>
+
+<p>In online jamming, it’s very important that music is in sync with others. To ensure this, SonicPi has a concept called cues. The server provides a basic metronome cue, which we kindly ask you to use in order to sync up with the rest. See code snippets below!</p>
+
+<p>In general, don’t be afraid, just play around and have fun. It’s just sounds :)</p>
+
+<textarea id="code-editor" code-editor=""></textarea>
+
+<h1 id="basic-commands">Basic commands</h1>
+
+<p>Playing a note</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">play</span> <span class="ss">:c4</span>
+</code></pre></div></div>
+
+<p>Playing a tone ladder</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">play</span> <span class="ss">:c4</span>
+<span class="nb">sleep</span> <span class="mi">1</span>
+<span class="n">play</span> <span class="ss">:d4</span>
+<span class="nb">sleep</span> <span class="mi">1</span>
+<span class="n">play</span> <span class="ss">:e4</span>
+</code></pre></div></div>
+
+<p>Playing a chord</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">play</span> <span class="ss">:c4</span>
+<span class="n">play</span> <span class="ss">:d4</span>
+<span class="n">play</span> <span class="ss">:e4</span>
+</code></pre></div></div>
+
+<p>Playing a chord, better</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">play</span> <span class="p">(</span><span class="n">chord</span> <span class="ss">:c4</span><span class="p">,</span> <span class="ss">:major</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Use a live loop to loop your code and sync up with others</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">live_loop</span> <span class="ss">:loopname</span>
+	<span class="n">sync</span> <span class="ss">:metro</span>
+
+	<span class="n">play</span> <span class="p">(</span><span class="n">chord</span> <span class="ss">:c4</span><span class="p">,</span> <span class="ss">:major</span><span class="p">)</span>
+	<span class="nb">sleep</span> <span class="mi">1</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">:loopname</code> can be an arbitrary name that identifies the loop. Please note that your loop keeps existing and playing even if you close this webpage. So please consider stopping your loop when you leave by overwriting your loop with an emtpy one, or simply by writing <code class="language-plaintext highlighter-rouge">stop</code> as first command within your loop:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">live_loop</span> <span class="ss">:loopname</span>
+	<span class="n">sync</span> <span class="ss">:metro</span>
+
+	<span class="n">stop</span>
+	<span class="n">play</span> <span class="p">(</span><span class="n">chord</span> <span class="ss">:c4</span><span class="p">,</span> <span class="ss">:major</span><span class="p">)</span>
+	<span class="nb">sleep</span> <span class="mi">1</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">sleep</code> time is in units of a beat. Also fractional values are possible to get eighth (0.5) etc.</p>
+
+<h1 id="use-different-sounds--synths">Use different sounds / synths</h1>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">use_synth</span> <span class="ss">:tb303</span>
+</code></pre></div></div>
+<p>Other synth are e.g. <code class="language-plaintext highlighter-rouge">:pulse</code>, <code class="language-plaintext highlighter-rouge">:dsaw</code>, <code class="language-plaintext highlighter-rouge">:fm</code>, <code class="language-plaintext highlighter-rouge">:prophet</code>. See <a href="">https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/synths.md</a> for a full list of available synths.</p>
+
+<p>You can control the parameters of the synths using e.g. <code class="language-plaintext highlighter-rouge">use_synth_defaults attack: 0.1, release: 0.7, cutoff: 50</code>. These parameters can also be appended to the <code class="language-plaintext highlighter-rouge">play</code> command.</p>
+
+<h1 id="playing-samples">Playing samples</h1>
+<p>The system has a lot of nice samples which you can use and mangle.</p>
+
+<p>Playing a sample</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sample</span> <span class="ss">:loop_amen</span>
+</code></pre></div></div>
+
+<p>There are lots of drum samples like <code class="language-plaintext highlighter-rouge">:drum_heavy_kick</code>, or <code class="language-plaintext highlighter-rouge">:drum_snare_hard</code>. But there are also other kinds of loops and samples like <code class="language-plaintext highlighter-rouge">:ambi_drone</code> or <code class="language-plaintext highlighter-rouge">:loop_3d_printer</code>. Get a full list here: <a href="">https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/samples.md</a></p>
+
+<p>You can mangle the loop using beat stretch, speed (also reverse), and filtering, e.g.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sample</span> <span class="ss">:loop_amen</span><span class="p">,</span> <span class="ss">beat_stretch: </span><span class="mi">4</span><span class="p">,</span> <span class="ss">cutoff: </span><span class="mi">70</span>
+</code></pre></div></div>
+<p>Other parameters are <code class="language-plaintext highlighter-rouge">rate: 0,5</code>, <code class="language-plaintext highlighter-rouge">rate: -1</code> (for reverse). There is also <code class="language-plaintext highlighter-rouge">rpitch 2</code> for transposing in semitones.</p>
+
+<h1 id="using-fx">Using FX</h1>
+
+<p>You can embed your code in fx blocks:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">live_loop</span> <span class="ss">:loopname</span> <span class="k">do</span>
+	<span class="n">sync</span> <span class="ss">:metro</span>
+	
+	<span class="n">with_fx</span> <span class="ss">:reverb</span><span class="p">,</span> <span class="ss">room: </span><span class="mi">2</span><span class="p">,</span> <span class="k">do</span>
+		<span class="n">play</span> <span class="ss">:c4</span>
+		<span class="nb">sleep</span> <span class="mi">1</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>A full list of all effects and there parameters can be found here: <a href="">https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/fx.md</a></p>
+
+<h1 id="more-advanced-snippets">More advanced snippets</h1>
+
+<p>Many examples can be found on github: <a href="">https://github.com/sonic-pi-net/sonic-pi/tree/main/etc/examples</a> and <a href="">https://gist.github.com/darinwilson/137764d4b06072de626c</a>, <a href="">https://github.com/hopbit/sonic-pi-snippets</a></p>
 
     </div>
     <div class='footer'>
