@@ -28,17 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
   	editor.save() // write contents to textarea
   })
 
+  async function postData(data) {
+    const response = await fetch('http://klingklangflut.de:2342/', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify(data)
+    });
+    return response
+  }
 
   let button = document.querySelector('[submit-code]')
   button.addEventListener('click', function(event, editor) {
-  	let textarea = document.querySelector('[code-editor]')
-    let text = textarea.value
+    event.preventDefault()
 
-	let url = "http://klingklangflut.de:2342";
-	let xhr = new XMLHttpRequest();
-	xhr.open("POST", url, true);
+    let textarea = document.querySelector('[code-editor]')
+    let payload = {
+      'code-editor': textarea.value
+    }
 
-	xhr.send(text);
+    postData(payload).then(function(result) {
+      console.log(result) 
+    });
   })
 
 })
