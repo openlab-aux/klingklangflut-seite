@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     lineNumbers: true,
     value: "#code-editor",
     theme: 'hopscotch',
+    extraKeys: {
+      // don't insert tabs in the editor, so that people using tabs 
+      // to navigate have a chance to leave the editor again.
+      'Tab': false,
+      'Shift-Tab': false
+    },
   })
 
   editor.on('blur', function(){

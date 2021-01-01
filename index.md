@@ -8,7 +8,7 @@ title: Main
 This is a project for remote online jamming via live coding.
 The system uses a SonicPi server as sound engine which you can send commands / music generating code to via this webpage. The music from all users gets mixed down and streamed to this website via a standard HTTP audio stream:
 
- <audio controls>
+ <audio controls aria-label='klingklangflut stream'>
   <source src="https://klingklangflut.de/klingklang.ogg" type="audio/ogg">
   Your browser does not support the audio tag.
 </audio> 
@@ -19,7 +19,7 @@ In online jamming, it's very important that music is in sync with others. To ens
 
 In general, don't be afraid, just play around and have fun. It's just sounds :)
 
-<textarea id="codeEditor" name="code-editor" aria-label='Editor for sonic pi commands' code-editor></textarea>
+<textarea aria-label='Editor for sonic pi commands' code-editor></textarea>
 
 <button type="button" submit-code>Send</button> 
 
