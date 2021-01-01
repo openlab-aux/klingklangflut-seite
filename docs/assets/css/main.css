@@ -60,7 +60,7 @@
 
 body { background: #111111; color: #DDDDDD; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; }
 
-a { color: #1290bf; }
+a { word-break: break-all; color: #1290bf; }
 
 a:hover, a:active { color: #fd8b19; }
 
