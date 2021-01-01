@@ -6,7 +6,6 @@ import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/hopscotch.css'
 
 // import javascript from node modules
-import 'unpoly'
 import CodeMirror from 'codemirror'
 import 'codemirror/mode/ruby/ruby'
 
