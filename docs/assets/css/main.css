@@ -40,7 +40,7 @@
 
 .footer-links--item { margin: 10px; }
 
-.logo { white-space: pre; background: linear-gradient(135deg, #1290bf, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: flex; justify-content: center; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; height: 336px; }
+.logo { white-space: pre; background: linear-gradient(135deg, #1290bf, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: flex; justify-content: center; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; line-height: 1em; height: 336px; }
 
 @media (max-width: 1200px) { .logo { font-size: 12px; height: 247px; } }
 
@@ -58,7 +58,7 @@
 
 .logo--flut { align-self: flex-start; }
 
-body { background: #111111; color: #DDDDDD; font-family: "Nanum Gothic", "sans-serif"; font-size: 16px; }
+body { background: #111111; color: #DDDDDD; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; line-height: 1.4em; }
 
 a { word-break: break-all; color: #fd8b19; text-decoration: none; }
 
@@ -68,6 +68,6 @@ code { font-family: "Nanum Gothic Coding", monospace; }
 
 button { display: inline-block; position: relative; cursor: pointer; background-color: #8fc13e; border: 1px solid #8fc13e; border-radius: 25px; padding: 10px 50px; color: black; font-weight: bold; font: inherit; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Pacifico", cursive; font-weight: normal; }
+h1, h2, h3, h4, h5, h6 { font-family: "Pacifico", cursive; font-weight: normal; margin-top: 1.8em; }
 
 /*# sourceMappingURL=main.css.map */
