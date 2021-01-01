@@ -53,17 +53,17 @@ play (chord :c4, :major)
 
 Use a live loop to loop your code and sync up with others
 ```ruby
-live_loop :loopname
+live_loop :loopname do
   sync :metro
 
   play (chord :c4, :major)
   sleep 1
 end
 ```
-`:loopname` can be an arbitrary name that identifies the loop. Please note that your loop keeps existing and playing even if you close this webpage. So please consider stopping your loop when you leave by overwriting your loop with an emtpy one, or simply by writing `stop` as first command within your loop:
+`:loopname` can be an arbitrary name that identifies the loop. **Please note that your loop keeps existing and playing even if you close this webpage. So please consider stopping your loop when you leave by overwriting your loop with an emtpy one, or simply by writing `stop` as first command within your loop:**
 
 ```ruby
-live_loop :loopname
+live_loop :loopname do
   sync :metro
 
   stop
@@ -113,8 +113,11 @@ live_loop :loopname do
   end
 end
 ```
-A full list of all effects and there parameters can be found here: [https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/fx.md]()
+A full list of all effects and their parameters can be found here: [https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/fx.md]()
 
 # More advanced snippets
 
-Many examples can be found on github: <https://github.com/sonic-pi-net/sonic-pi/tree/main/etc/examples>, <https://gist.github.com/darinwilson/137764d4b06072de626c>, and <https://github.com/hopbit/sonic-pi-snippets>
+Many examples can be found on github, e.g.: 
+* <https://github.com/sonic-pi-net/sonic-pi/tree/main/etc/examples>,
+* <https://gist.github.com/darinwilson/137764d4b06072de626c>, and
+* <https://github.com/hopbit/sonic-pi-snippets>
