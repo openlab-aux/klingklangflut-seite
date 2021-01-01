@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   async function postData(data) {
-    const response = await fetch('http://klingklangflut.de:2342/', {
+    const response = await fetch('https://klingklangflut.de:2342/', {
       method: 'POST',
       mode: 'no-cors',
       body: JSON.stringify(data)
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let textarea = document.querySelector('[code-editor]')
     let payload = {
-      'code-editor': textarea.value
+      'commands': textarea.value
     }
 
     postData(payload).then(function(result) {
