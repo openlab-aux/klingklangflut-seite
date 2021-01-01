@@ -8,6 +8,7 @@ import 'codemirror/theme/hopscotch.css'
 // import javascript from node modules
 import CodeMirror from 'codemirror'
 import 'codemirror/mode/ruby/ruby'
+import 'codemirror/addon/runmode/runmode'
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -54,6 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
     postData(payload).then(function(result) {
       console.log(result) 
     });
+  })
+
+  let codeSamples = document.querySelectorAll('code.language-ruby-custom')
+  codeSamples.forEach(function(sample) {
+    let code = sample.textContent
+    sample.innerHtml = ''
+    CodeMirror.runMode(code, 'ruby', sample)
+    sample.classList.add('cm-s-hopscotch')
   })
 
 })

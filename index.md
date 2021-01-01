@@ -26,12 +26,12 @@ In general, don't be afraid, just play around and have fun. It's just sounds :)
 # Basic commands
 
 Playing a note
-```ruby
+```ruby-custom
 play :c4
 ```
 
 Playing a tone ladder
-```ruby
+```ruby-custom
 play :c4
 sleep 1
 play :d4
@@ -40,19 +40,19 @@ play :e4
 ```
 
 Playing a chord
-```ruby
+```ruby-custom
 play :c4
 play :d4
 play :e4
 ```
 
 Playing a chord, better
-```ruby
+```ruby-custom
 play (chord :c4, :major)
 ```
 
 Use a live loop to loop your code and sync up with others
-```ruby
+```ruby-custom
 live_loop :loopname do
   sync :metro
 
@@ -62,7 +62,7 @@ end
 ```
 `:loopname` can be an arbitrary name that identifies the loop. **Please note that your loop keeps existing and playing even if you close this webpage. So please consider stopping your loop when you leave by overwriting your loop with an emtpy one, or simply by writing `stop` as first command within your loop:**
 
-```ruby
+```ruby-custom
 live_loop :loopname do
   sync :metro
 
@@ -76,7 +76,7 @@ The `sleep` time is in units of a beat. Also fractional values are possible to g
 
 
 # Use different sounds / synths
-```ruby
+```ruby-custom
 use_synth :tb303
 ```
 Other synth are e.g. `:pulse`, `:dsaw`, `:fm`, `:prophet`. See [https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/synths.md]() for a full list of available synths.
@@ -87,14 +87,14 @@ You can control the parameters of the synths using e.g. `use_synth_defaults atta
 The system has a lot of nice samples which you can use and mangle.
 
 Playing a sample
-```ruby
+```ruby-custom
 sample :loop_amen
 ```
 
 There are lots of drum samples like `:drum_heavy_kick`, or `:drum_snare_hard`. But there are also other kinds of loops and samples like `:ambi_drone` or `:loop_3d_printer`. Get a full list here: [https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/samples.md]()
 
 You can mangle the loop using beat stretch, speed (also reverse), and filtering, e.g.
-```ruby
+```ruby-custom
 sample :loop_amen, beat_stretch: 4, cutoff: 70
 ```
 Other parameters are `rate: 0,5`, `rate: -1` (for reverse). There is also `rpitch 2` for transposing in semitones.
@@ -103,7 +103,7 @@ Other parameters are `rate: 0,5`, `rate: -1` (for reverse). There is also `rpitc
 
 You can embed your code in fx blocks:
 
-```ruby
+```ruby-custom
 live_loop :loopname do
   sync :metro
 	
