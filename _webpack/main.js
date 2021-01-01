@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })
 
-  let codeSamples = document.querySelectorAll('code.language-ruby-custom')
+  let codeSamples = document.querySelectorAll('code.language-ruby-custom, code.language-plaintext')
   codeSamples.forEach(function(sample) {
     let code = sample.textContent
     sample.innerHtml = ''
