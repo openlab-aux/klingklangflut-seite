@@ -79,7 +79,7 @@ The `sleep` time is in units of a beat. Also fractional values are possible to g
 ```ruby-custom
 use_synth :tb303
 ```
-Other synth are e.g. `:pulse`, `:dsaw`, `:fm`, `:prophet`. See [https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/synths.md]() for a full list of available synths.
+Other synth are e.g. `:pulse`, `:dsaw`, `:fm`, `:prophet`. See <https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/synths.md> for a full list of available synths.
 
 You can control the parameters of the synths using e.g. `use_synth_defaults attack: 0.1, release: 0.7, cutoff: 50`. These parameters can also be appended to the `play` command.
 
@@ -91,7 +91,7 @@ Playing a sample
 sample :loop_amen
 ```
 
-There are lots of drum samples like `:drum_heavy_kick`, or `:drum_snare_hard`. But there are also other kinds of loops and samples like `:ambi_drone` or `:loop_3d_printer`. Get a full list here: [https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/samples.md]()
+There are lots of drum samples like `:drum_heavy_kick`, or `:drum_snare_hard`. But there are also other kinds of loops and samples like `:ambi_drone` or `:loop_3d_printer`. Get a full list here: <https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/samples.md>
 
 You can mangle the loop using beat stretch, speed (also reverse), and filtering, e.g.
 ```ruby-custom
@@ -113,7 +113,7 @@ live_loop :loopname do
   end
 end
 ```
-A full list of all effects and their parameters can be found here: [https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/fx.md]()
+A full list of all effects and their parameters can be found here: <https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/fx.md>
 
 # More advanced snippets
 
