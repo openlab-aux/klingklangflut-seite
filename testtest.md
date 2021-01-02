@@ -14,7 +14,6 @@ layout: default
 ## Colors (available as sass variables)
 
 <div class='colors'>
-	<div class='colors--color-1'>$color-1</div>
 	<div class='colors--color-2'>$color-2</div>
 	<div class='colors--color-3'>$color-3</div>
 	<div class='colors--color-4'>$color-4</div>
