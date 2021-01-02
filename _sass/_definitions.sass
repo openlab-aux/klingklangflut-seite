@@ -12,7 +12,7 @@ $color-5: #b33508
 $color-6: #dd464c
 $color-7: #c85e7c
 
-$gradient: linear-gradient(135deg, $color-2, $color-3, $color-5, $color-6, $color-7, $color-2, $color-3, $color-5, $color-6, $color-7, $color-2, $color-3, $color-5, $color-6, $color-7, $color-2, $color-3, $color-5, $color-6, $color-7)
+$gradient: linear-gradient(135deg, $color-2, $color-3, $color-5, $color-6, $color-7, $color-2, $color-3, $color-5, $color-6, $color-7)
 
 $breakpoint-xs: 480px
 $breakpoint-sm: 576px
@@ -31,6 +31,6 @@ $breakpoint-xxl: 1400px
     @content
 
 =animated-background($factor: 1)
-  background-size: $factor*500% $factor*500%
+  background-size: $factor*250% 100%
   background-image: $gradient
-  animation: gradient-animation 120s linear infinite
+  animation: gradient-animation 60s linear infinite
