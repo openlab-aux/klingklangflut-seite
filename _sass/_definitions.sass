@@ -17,7 +17,7 @@ $color-5: #b33508
 $color-6: #dd464c
 $color-7: #c85e7c
 
-$gradient: linear-gradient(135deg, $color-1, $color-2, $color-3, $color-5, $color-6, $color-7)
+$gradient: linear-gradient(135deg, $color-1, $color-2, $color-3, $color-5, $color-6, $color-7, $color-1, $color-2, $color-3, $color-5, $color-6, $color-7, $color-1, $color-2, $color-3, $color-5, $color-6, $color-7, $color-1, $color-2, $color-3, $color-5, $color-6, $color-7)
 
 $breakpoint-xs: 480px
 $breakpoint-sm: 576px
@@ -35,7 +35,7 @@ $breakpoint-xxl: 1400px
   @media (max-width: $breakpoint)
     @content
 
-=rainbow
-  background: $gradient
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
+=animated-background
+  background-size: 1000% 1000%
+  $animation-values: gradient-animation 100s linear infinite
+  animation: $animation-values
