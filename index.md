@@ -23,7 +23,7 @@ In general, don't be afraid, just play around and have fun. It's just sounds :)
 
 <button type="button" submit-code>Send</button> 
 
-# Basic commands
+## Basic commands
 
 Playing a note
 ```ruby-custom
@@ -75,7 +75,7 @@ end
 The `sleep` time is in units of a beat. Also fractional values are possible to get eighth (0.5) etc.
 
 
-# Use different sounds / synths
+## Use different sounds / synths
 ```ruby-custom
 use_synth :tb303
 ```
@@ -83,7 +83,7 @@ Other synth are e.g. `:pulse`, `:dsaw`, `:fm`, `:prophet`. See <https://github.c
 
 You can control the parameters of the synths using e.g. `use_synth_defaults attack: 0.1, release: 0.7, cutoff: 50`. These parameters can also be appended to the `play` command.
 
-# Playing samples
+## Playing samples
 The system has a lot of nice samples which you can use and mangle.
 
 Playing a sample
@@ -99,7 +99,7 @@ sample :loop_amen, beat_stretch: 4, cutoff: 70
 ```
 Other parameters are `rate: 0,5`, `rate: -1` (for reverse). There is also `rpitch 2` for transposing in semitones.
 
-# Using FX
+## Using FX
 
 You can embed your code in fx blocks:
 
@@ -115,7 +115,7 @@ end
 ```
 A full list of all effects and their parameters can be found here: <https://github.com/sonic-pi-net/sonic-pi/blob/main/etc/doc/cheatsheets/fx.md>
 
-# More advanced snippets
+## More advanced snippets
 
 Many examples can be found on github, e.g.: 
 * <https://github.com/sonic-pi-net/sonic-pi/tree/main/etc/examples>,

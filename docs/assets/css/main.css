@@ -38,23 +38,19 @@
 
 .footer-links--item { margin: 10px; }
 
-.logo { white-space: pre; background: linear-gradient(135deg, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 500% 500%; background-image: linear-gradient(135deg, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); animation: gradient-animation 120s linear infinite; display: flex; justify-content: center; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; line-height: 1em; height: 336px; }
+.logo { display: flex; justify-content: center; white-space: pre; background: linear-gradient(135deg, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 500% 500%; background-image: linear-gradient(135deg, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); animation: gradient-animation 120s linear infinite; }
 
-@media (max-width: 1200px) { .logo { font-size: 12px; height: 247px; } }
+.logo--ascii { font-family: "Nanum Gothic Coding", monospace; line-height: 1em; font-weight: bold; font-size: 14px; }
 
-@media (max-width: 992px) { .logo { font-size: 10px; height: 208px; } }
+@media (max-width: 1200px) { .logo--ascii { font-size: 12px; } }
 
-@media (max-width: 768px) { .logo { font-size: 8px; height: 167px; } }
+@media (max-width: 992px) { .logo--ascii { font-size: 10px; } }
 
-@media (max-width: 576px) { .logo { font-size: 6px; height: 125px; } }
+@media (max-width: 768px) { .logo--ascii { font-size: 8px; } }
 
-@media (max-width: 480px) { .logo { font-size: 5px; height: 104px; } }
+@media (max-width: 576px) { .logo--ascii { font-size: 6px; } }
 
-.logo--kling { align-self: center; }
-
-.logo--klang { align-self: flex-end; }
-
-.logo--flut { align-self: flex-start; }
+@media (max-width: 480px) { .logo--ascii { font-size: 4px; } }
 
 body { background: #111111; color: #FFFFFF; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; line-height: 1.4em; }
 
@@ -66,7 +62,13 @@ code { font-family: "Nanum Gothic Coding", monospace; }
 
 button { display: inline-block; position: relative; cursor: pointer; border: none; border-radius: 25px; padding: 10px 50px; color: black; font-weight: bold; font: inherit; background-size: 5000% 5000%; background-image: linear-gradient(135deg, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c, #8fc13e, #fdcc59, #b33508, #dd464c, #c85e7c); animation: gradient-animation 120s linear infinite; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Pacifico", cursive; font-weight: normal; margin-top: 1.8em; }
+h1, h2, h3, h4, h5, h6 { font-family: "Pacifico", cursive; font-weight: normal; line-height: 1.2em; margin-top: 1.8em; }
+
+h1 { margin-top: 1em; }
+
+pre { overflow-x: scroll; -ms-overflow-style: none; scrollbar-width: none; }
+
+pre::-webkit-scrollbar { display: none; }
 
 @keyframes gradient-animation { 0% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }

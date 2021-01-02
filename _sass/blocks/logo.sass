@@ -1,40 +1,28 @@
 @import definitions
 
 .logo
+  display: flex
+  justify-content: center
+
   white-space: pre
   background: $gradient
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
   +animated-background
   
-  display: flex
-  justify-content: center
-
+.logo--ascii
   font-family: $monospace-font
-  font-size: $font-size-base
   line-height: 1em
-  height: 336px
+  font-weight: bold
+
+  font-size: 14px
   +breakpoint-down($breakpoint-xl)
     font-size: 12px
-    height: 247px
   +breakpoint-down($breakpoint-lg)
     font-size: 10px
-    height: 208px
   +breakpoint-down($breakpoint-md)
     font-size: 8px
-    height: 167px
   +breakpoint-down($breakpoint-sm)
     font-size: 6px
-    height: 125px
   +breakpoint-down($breakpoint-xs)
-    font-size: 5px
-    height: 104px
-
-.logo--kling
-  align-self: center
-
-.logo--klang
-  align-self: flex-end
-
-.logo--flut
-  align-self: flex-start
+    font-size: 4px
