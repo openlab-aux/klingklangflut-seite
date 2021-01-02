@@ -21,3 +21,7 @@ exclude:
 url: '' # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: '/klingklangflut-seite' # the subpath of your site, e.g. /blog
 destination: 'docs'
+
+sass:
+  style: compressed
+
