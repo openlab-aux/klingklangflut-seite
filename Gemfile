@@ -17,5 +17,6 @@ gem "jekyll", "~> 4.1.1"
 # instead building to contents to a folder, which is used by Github to 
 # serve the page.
 
-#group :jekyll_plugins do
-#end
+group :jekyll_plugins do
+  gem 'jekyll-gzip'
+end

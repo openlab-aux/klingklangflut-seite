@@ -25,3 +25,5 @@ destination: 'docs'
 sass:
   style: compressed
 
+plugins:
+  - jekyll-gzip
