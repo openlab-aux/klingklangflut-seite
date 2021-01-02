@@ -36,7 +36,7 @@
 
 .footer-links ul { list-style-type: none; padding: 0; display: flex; justify-content: space-evenly; flex-wrap: wrap; }
 
-.footer-links a { color: #DDDDDD; text-decoration: none; vertical-align: top; }
+.footer-links a { color: #FFFFFF; text-decoration: none; vertical-align: top; }
 
 .footer-links--item { margin: 10px; }
 
@@ -58,7 +58,7 @@
 
 .logo--flut { align-self: flex-start; }
 
-body { background: #111111; color: #DDDDDD; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; line-height: 1.4em; }
+body { background: #111111; color: #FFFFFF; font-family: "Nanum Gothic Coding", monospace; font-size: 16px; line-height: 1.4em; }
 
 a { word-break: break-all; color: #fd8b19; text-decoration: none; }
 
