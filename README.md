@@ -1,32 +1,26 @@
-# Webseite für Klingklangflut
+# Website for Klingklangflut
 
-## Setup (lokal)
+## Setup (local)
 
-1. Ruby installieren (aufgesetzt wurde es mit Ruby 2.6.6. Ich empfehle rbenv oder RVM zum managen der Ruby-Version.)
-2. Bundler installieren: `gem install bundler`
-3. Bundeln: `bundle install`
-4. Javascript aufsetzen (siehe Abschnitt Javascript)
-5. `yarn run develop` in der konsole starten (startet jekyll und die js build pipeline)
-6. <http://localhost:4000/> aufrufen
+1. Install Ruby (see .ruby-version in the project root for the exact version. I recommend using rbenv.)
+2. Install bundler: `gem install bundler`
+3. Bundle: `bundle install`
+4. Install Node (see .nvmrc in the project root for the exact version. I recommend using NVM.)
+5. Install yarn. [Instructions](https://yarnpkg.com/getting-started/install)
+6. Run `yarn install` on the command line.
+7. Call `yarn run develop` in the console. This starts jekyll and webpack. Changes will be compiled automatically.
+8. Open <http://localhost:4000/>
 
 
-## Weiterentwicklung
+## Development
 
-Texte, die auf der Webseite stehen sollen, in die `index.md` einfügen (Markdown). Wenn `jekyll serve` lokal läuft, wird das HTML und CSS für die Seite nach Speichern automatisch neu generiert (siehe Ordner `_sites`. Dort keine Änderungen machen, das wird sonst von Jekyll wieder überschrieben!)
+* To change the text on the webpage, edit `index.md` (in the project root) (you can write markdown or html there).
+* To add styles, see the `_sass` folder. If you add new files, make sure to import them in `main.sass`.
+* To add javascript, see the `_webpack` folder. Yarn is used to manage dependencies.
 
-Styles im `_sass` order hinzufügen. `main.sass` ist das Hauptfile, in dem alle anderen files importiert werden müssen. Sass ist wie CSS mit ein paar Nettigkeiten, wie mixins, weniger Klammern und ohne Semikolons. Jekyll wird das nach CSS übersetzen.
-
-Unter <http://localhost:4000/testtest/> kann man das Farbschema und andere Style-Elemente (bislang noch nicht allzu viele ;) ) betrachten. Als Konzept angedacht war die Seite als Single Page zu belassen, und alle Infos für Besucher direkt auf der Startseite unterzubringen.
+See <http://localhost:4000/testtest/> for colors and html elements that can be reused.
 
 
 ## Deploy
 
-In der Konsole `yarn run build` aufrufen. Dann alles einchecken und ins Git Repo pushen. Auf der Github Page werden die Inhalte des Folders `docs` im Branch `main` angezeigt.
-
-
-## Javascript
-
-Ich verwende `nvm`. `nvm use` verwendet die node-version aus .nvmrc, also aktuell v12.
-Dann wird noch yarn gebraucht. [Install-Anleitung hier](https://yarnpkg.com/getting-started/install).
-
-Javascript ist gemanaged mit webpack und yarn. Schreibe js im `_webpack` Ordner. Inhalt in `assets` und `_site/assets` wird überschrieben. Mit `yarn run develop` werden javascript assets automatisch neu kompiliert bei Änderungen.
+Run `yarn run build` on the command line. This will generate HTML etc. in the docs folder. Commit that with git and push your changes to Github. Github will display the contents of the `docs` folder (without further postprocessing).
